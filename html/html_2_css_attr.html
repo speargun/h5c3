@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="zh">
+<!--教程地址：https://www.bilibili.com/video/BV14J4114768-->
+
+<head>
+    <meta charset="utf-8">
+    <title>CSS新属性</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        em,
+        i {
+            font-style: normal;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        img {
+            border: 0;
+            vertical-align: middle;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #c81623;
+        }
+
+        button,
+        input {
+            font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+        }
+
+        body {
+            -webkit-font-smoothing: antialised;
+            background-color: #fff;
+            font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+            color: #666;
+        }
+
+        .hide,
+        .none {
+            display: none;
+        }
+
+        .clearfix:after {
+            visibility: hidden;
+            clear: both;
+            display: block;
+            content: ".";
+            height: 0;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+        input[value="请输入用户名"] {
+            background-color: pink;
+        }
+
+        div[class^=icon] {
+            font-size: 20px;
+        }
+
+        article div:first-child {
+            background-color: orange;
+        }
+
+        div:nth-of-type(-2n+4) {
+            font-size: 30px;
+            background-color: gold;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" value="请输入用户名">
+    <input type="text">
+    <article>
+        <div class="icon1">小图标1</div>
+        <div class="icon2">小图标2</div>
+        <div class="icon3">小图标3</div>
+        <div class="icon4">小图标4</div>
+        <div>大图标1</div>
+        <div>大图标2</div>
+        <div>大图标3</div>
+    </article>
+</body>
+
+</html>

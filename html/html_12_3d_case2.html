@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="zh">
+<!--教程地址：https://www.bilibili.com/video/BV14J4114768-->
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/template.css">
+    <style>
+        ul {
+            margin-top: 100px;
+            margin-left: 100px;
+        }
+
+        ul li {
+            margin-left: 10px;
+        }
+
+        .container {
+            position: relative;
+            float: left;
+            width: 100px;
+            height: 30px;
+            transform-style: preserve-3d;
+            transition: all .2s ease 0s;
+        }
+
+        .container:hover {
+            transform: rotateX(90deg);
+        }
+
+        div[class^="box"] {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 100%;
+            height: 100%;
+            font-size: 20px;
+            color: white;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        .container .box1 {
+            background-color: pink;
+            transform: translate3d(-50%, -50%, 15px);
+        }
+
+        .container .box2 {
+            background-color: purple;
+            transform-origin: bottom;
+            transform: translate3d(-50%, -50%, -15px) rotateX(-90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li class="container">
+            <div class="box1">爱莉希雅</div>
+            <div class="box2">芽衣</div>
+        </li>
+        <li class="container">
+            <div class="box1">爱莉希雅</div>
+            <div class="box2">芽衣</div>
+        </li>
+        <li class="container">
+            <div class="box1">爱莉希雅</div>
+            <div class="box2">芽衣</div>
+        </li>
+        <li class="container">
+            <div class="box1">爱莉希雅</div>
+            <div class="box2">芽衣</div>
+        </li>
+        <li class="container">
+            <div class="box1">爱莉希雅</div>
+            <div class="box2">芽衣</div>
+        </li>
+    </ul>
+</body>
+
+</html>

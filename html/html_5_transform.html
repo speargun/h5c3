@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="zh">
+<!--教程地址：https://www.bilibili.com/video/BV14J4114768-->
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/template.css">
+    <style>
+        .container {
+            width: 200px;
+            height: 200px;
+            background-color: grey;
+            margin-top: 100px;
+            margin-left: 100px;
+
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            color: #ffffff;
+            transition: all 0.3s;
+            text-align: center;
+            font-size: 40px;
+            padding-top: 60px;
+            transform-origin: bottom left;
+            transform: rotate(90deg);
+        }
+
+        .container:hover .box {
+            transform: rotate(0deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">传媒</div>
+    </div>
+
+</body>
+
+</html>

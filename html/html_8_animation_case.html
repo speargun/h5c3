@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="zh">
+<!--教程地址：https://www.bilibili.com/video/BV14J4114768-->
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/template.css">
+    <style>
+        @keyframes pulse {
+            0% {
+                width: 5px;
+                height: 5px;
+            }
+
+            100% {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        @keyframes t {
+            0% {
+                width: 16px;
+            }
+
+            100% {
+                width: 64px;
+            }
+        }
+
+        .map {
+            position: relative;
+            margin-top: 200px;
+            margin-left: 100px;
+            width: 500px;
+            height: 300px;
+        }
+
+        .map img {
+            width: 100%;
+        }
+
+        .city {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .dot {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 5px;
+            height: 5px;
+            background-color: lightblue;
+            border-radius: 50%;
+        }
+
+        .dot::after {
+            content: "内容";
+            position: absolute;
+            left: 15px;
+            top: -10px;
+            width: 70px;
+            font-size: 16px;
+            color: lightblue;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: t 1s steps(4) 0s 1 normal forwards;
+        }
+
+        .city div[class^="pulse"] {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            box-shadow: 0 0 12px 0px lightblue;
+            animation: pulse 1s linear 0s infinite normal backwards;
+        }
+
+        .map .city .pulse1 {
+            animation-delay: 0s;
+        }
+
+        .map .city .pulse2 {
+            animation-delay: 0.3s;
+        }
+
+        .map .city .pulse3 {
+            animation-delay: 0.6s;
+        }
+
+        .ear {
+            left: 63px;
+            top: 68px;
+        }
+
+        .ear .dot::after {
+            content: "耳朵";
+        }
+
+        .mouth {
+            left: 200px;
+            top: 158px;
+        }
+
+        .mouth .dot::after {
+            content: "嘴巴";
+        }
+
+        .glasses {
+            left: 186px;
+            top: 45px;
+        }
+
+        .glasses .dot::after {
+            content: "黑框眼镜";
+        }
+
+        .map .city .gl {
+            box-shadow: 0 0 12px 0 gold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="map">
+        <img src="../images/html_1_poster.png" alt="luodayou">
+        <div class="city ear">
+            <div class="dot"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+        <div class="city mouth">
+            <div class="dot"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+        <div class="city glasses">
+            <div class="dot"></div>
+            <div class="pulse1 gl"></div>
+            <div class="pulse2 gl"></div>
+            <div class="pulse3 gl"></div>
+        </div>
+    </div>
+</body>
+
+</html>

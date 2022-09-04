@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="zh">
+<!--教程地址：https://www.bilibili.com/video/BV14J4114768-->
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/template.css">
+    <style>
+        body {
+            background-color: lightgray;
+        }
+
+        div {
+            position: absolute;
+            left: 0px;
+            top: 100px;
+            width: 200px;
+            height: 100px;
+            background: transparent url(../images/bear.png) no-repeat;
+            animation: run 0.6s steps(8) infinite, move 2s 1 forwards;
+        }
+
+        @keyframes run {
+            0% {
+                background-position: 0px 0px;
+            }
+
+            100% {
+                background-position: -1600px 0px;
+            }
+
+        }
+
+        @keyframes move {
+            0% {
+                left: 0px;
+            }
+
+            100% {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

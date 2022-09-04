@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="zh">
+<!--教程地址：https://www.bilibili.com/video/BV14J4114768-->
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/template.css">
+    <style>
+        body {
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .container {
+            position: relative;
+            margin-top: 100px;
+            margin-left: 100px;
+            width: 200px;
+            height: 200px;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .spin {
+            animation: rotate 2s linear 0s infinite normal forwards;
+        }
+
+        .spin .box1,
+        .spin .box2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            color: white;
+            font-size: 20px;
+        }
+
+        .spin .box2 {
+            background-color: purple;
+            transform: translate(-50%, -50%) rotate3d(1, 0, 0, 45deg);
+        }
+
+        .flip {
+            transition: all 0.5s ease 0s;
+        }
+
+        .flip:hover {
+            transform: rotate3d(0, 1, 0, 180deg);
+        }
+
+        .flip .box1,
+        .flip .box2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            color: white;
+            font-size: 20px;
+            line-height: 100px;
+            text-align: center;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .flip .box2 {
+            background-color: purple;
+            transform: translate3d(-50%, -50%, -1px) rotateY(180deg);
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate3d(0, 1, 0, 0deg);
+            }
+
+            100% {
+                transform: rotate3d(0, 1, 0, 360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container spin">
+        <div class="box1">爱莉希雅</div>
+        <div class="box2">芽衣</div>
+    </div>
+    <div class="container flip">
+        <div class="box1">爱莉希雅</div>
+        <div class="box2">芽衣</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="zh">
+<!--教程地址：https://www.bilibili.com/video/BV14J4114768-->
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/template.css">
+    <style>
+        @keyframes move {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            25% {
+                transform: translate(300px, 0);
+            }
+
+            50% {
+                transform: translate(300px, 200px);
+            }
+
+            75% {
+                transform: translate(0, 200px);
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        /*.box {
+            margin-top: 100px;
+            margin-left: 100px;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            animation-name: move;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+        }*/
+
+        .box {
+            margin-top: 100px;
+            margin-left: 100px;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            animation: move 5s ease 0s infinite alternate forwards;
+        }
+
+        .box:hover {
+            animation-play-state: paused;
+        }
+
+        .box2 {
+            position: absolute;
+            left: 200px;
+            top: 200px;
+            width: 200px;
+            height: 100px;
+            background-color: gold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="box2"></div>
+
+</body>
+
+</html>
